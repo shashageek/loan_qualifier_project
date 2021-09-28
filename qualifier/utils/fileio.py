@@ -30,7 +30,7 @@ def load_csv(csvpath):
             data.append(row)
     return data
 
-def save_csv(data_results, output_path):
+def save_csv(output_path, data_results, header = None):
     """Saves the qualifying loans to a CSV file.
 
     Args:
@@ -43,7 +43,10 @@ def save_csv(data_results, output_path):
     # Use the csv library and `csv.writer` to write the header row
     # and each row of the `qualifying_loans` list.
     with open (output_path, 'w', newline="") as csvfile:
-        csvwriter = csv.writer(csvfile)
+        csvwriter = csv.writer(csvfile, delimiter=',')
         #csvwriter.writerow(header)
-        for row in data_results:
-            csvwriter.writerow(row.values())
+        # for row in data_results:
+            # csvwriter.writerow(row)
+        if header:
+            csvwriter.writerow(header)
+        csvwriter.writerows(data_results)

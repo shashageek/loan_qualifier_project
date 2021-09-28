@@ -117,7 +117,7 @@ def save_qualifying_loans(qualifying_loans):
     else:
         sys.exit("The list is not saved.")
 
-    return save_csv(qualifying_loans,output_path)
+    return save_csv(output_path, qualifying_loans)
 
 
 
