@@ -106,6 +106,9 @@ def find_qualifying_loans(bank_data, credit_score, debt, income, loan, home_valu
 def save_qualifying_loans(qualifying_loans):
     """Prompts the user for whether to save their qualifying loans.
 
+    Args:
+        qualifying_loans (list of list) : The list of qualified loans filtered.
+
     Returns:
         Call the save_csv funtion and save the data in the file with defined path.
     """

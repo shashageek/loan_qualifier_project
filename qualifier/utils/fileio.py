@@ -34,7 +34,9 @@ def save_csv(output_path, data_results, header = None):
     """Saves the qualifying loans to a CSV file.
 
     Args:
-        qualifying_loans (list of lists): The qualifying bank loans.
+        output_path (str) : The Path provided by the user.
+        data_results (list of lists): The qualifying bank loans.
+        head: No header is asigned
     """
     # @TODO: Complete the usability dialog for savings the CSV Files.
     # header = ["Lender", "Max_loan_Amount", "Max_LTV", "Max_DTI","Min_Credit_Score","Interest_Rate"]
